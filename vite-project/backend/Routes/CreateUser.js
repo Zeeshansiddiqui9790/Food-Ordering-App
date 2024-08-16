@@ -23,10 +23,10 @@ router.post("/createuser",
                 location: req.body.location,
                 Date: Date.now()
             });
-            res.json("user created");
+            res.json({success:true});
         } catch (err) {
             console.error(err);
-            res.status(500).json("failed to create user");
+            res.status(500).json({success:false});
         }
     }
 );
